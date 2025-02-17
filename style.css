@@ -2,26 +2,34 @@
     margin: 0;
     padding: 0;
     
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 .main-container {
     display: grid;
     grid:   "sidebar header" 1fr
             "sidebar main" 5fr
-            /1fr 4fr
+            /1fr 4fr;
+}
+
+.main-container > *{
+    outline: 1px solid red;
 }
 
 .header {
     grid-area: header;
     display: grid;
-    grid:   "search controls" 1fr
+    grid:   "search account" 1fr
             "info controls" 1fr
-            /2fr 1fr
+            /2fr 1fr;
 }
 
 .search-bar {
     grid-area: search;
+}
+
+.user-account{
+    grid-area: account;
 }
 
 .user-menu {
@@ -30,6 +38,7 @@
 
 .user-info {
     grid-area: info;
+    display: flex;
 }
 
 .sidebar {
