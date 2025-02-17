@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     
@@ -22,10 +23,15 @@
     grid:   "search account" 1fr
             "info controls" 1fr
             /2fr 1fr;
+    padding: 15px 30px;
+
 }
 
 .search-bar {
     grid-area: search;
+    display: flex;
+    gap: 15px;
+
 }
 
 .user-account{
@@ -39,6 +45,33 @@
 .user-info {
     grid-area: info;
     display: flex;
+}
+
+.magnifier {
+    height: 1.1em;
+    vertical-align: middle;
+}
+
+.search {
+    border-radius: 10px;
+    border: none;
+    width: 80%;
+    height: 1.5em;
+    background-color: rgb(226,232,240);
+}
+
+.icon {
+    max-height: 3rem;
+    border-radius: 50%;
+}
+
+.user-button {
+    border-radius: 20px;
+    border: none;
+    padding: 0.3em;
+    width: 5em;
+    background-color: rgb(25,146,212);
+    color: white;
 }
 
 .sidebar {
