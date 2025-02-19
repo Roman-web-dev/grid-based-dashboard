@@ -35,7 +35,7 @@
             /2fr minmax(100px, 300px);
     padding: 15px 30px; 
     gap: 15px;
-    box-shadow: 4px 5px 5px -3px var(--sahdow-grey);
+    box-shadow: 0px 2px 5px var(--sahdow-grey);
 }
 
 .search-bar {
@@ -126,30 +126,28 @@ label {
 
 .sidebar {
     grid-area: sidebar;
-    display: grid;
-    grid-template: 1fr 3fr 5fr / 1fr 6fr;
-    grid-template-areas:    "icons logo"
-                            "icons nav"
-                            "icons options";
     background-color: var(--light-blue);
     color: white;
     padding: 15px;
 }
 
-.logo {
-    grid-area: logo;
+.sidebar ul {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
 }
-
-.navigation {
-    grid-area: nav;
-}
-
-.options {
-    grid-area: options;
-}
-
 .icons {
     grid-area: icons;
+    height: 1em;
+}
+
+.icon-dash {
+    grid-area: icon-dash;
+    height: 1em;
+}
+
+.sidebar ul {
+    display: grid;
+    gap: 15px;
 }
 
 .main {
