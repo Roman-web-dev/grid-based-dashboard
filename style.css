@@ -15,7 +15,7 @@
 }
 
 .main-container > *{
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 .header {
@@ -26,6 +26,7 @@
             /2fr minmax(100px, 300px);
     padding: 15px 30px; 
     gap: 15px;
+    box-shadow: 4px 5px 5px -3px rgb(172, 172, 172);
 }
 
 .search-bar {
