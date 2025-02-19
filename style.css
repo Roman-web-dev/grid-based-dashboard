@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
     
     /* outline: 1px solid red; */
 }
@@ -22,56 +23,87 @@
     display: grid;
     grid:   "search account" 1fr
             "info controls" 1fr
-            /2fr 1fr;
-    padding: 15px 30px;
-
+            /2fr minmax(100px, 300px);
+    padding: 15px 30px; 
+    gap: 15px;
 }
 
 .search-bar {
     grid-area: search;
-    display: flex;
+    display: grid;
+    grid-template-columns: min-content auto;
     gap: 15px;
-
+    align-items: center;
 }
 
 .user-account{
     grid-area: account;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 2fr;
+    justify-items: center;
+    align-items: center;
 }
 
 .user-menu {
     grid-area: controls;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+
 }
 
 .user-info {
     grid-area: info;
-    display: flex;
+    display: grid;
+    grid-template-columns: min-content auto;
+    gap: 15px;
+    font-weight: bold;
+    align-items: center;
+}
+
+.info-text-small {
+    font-size: 0.7em;
+}
+
+.icon {
+    max-height: 2rem;
+    border-radius: 50%;
+}
+
+.user-info-icon {
+    max-height: 3rem;
+}
+
+label {
+    max-width: fit-content;
 }
 
 .magnifier {
+    display: flex;
     height: 1.1em;
     vertical-align: middle;
+}
+
+.user-name {
+    color: black;
+    font-weight: bold;
 }
 
 .search {
     border-radius: 10px;
     border: none;
-    width: 80%;
-    height: 1.5em;
+    width: clamp(10vw, 100%, 600px);
+    height: 1.8em;
     background-color: rgb(226,232,240);
-}
-
-.icon {
-    max-height: 3rem;
-    border-radius: 50%;
 }
 
 .user-button {
     border-radius: 20px;
     border: none;
-    padding: 0.3em;
-    width: 5em;
     background-color: rgb(25,146,212);
     color: white;
+    padding: 0.5em 1.5em;
 }
 
 .sidebar {
