@@ -138,6 +138,7 @@ label {
 .icons {
     grid-area: icons;
     height: 1em;
+    filter: invert(1); /*inverts black svg into white*/
 }
 
 .icon-dash {
