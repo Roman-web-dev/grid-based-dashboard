@@ -20,7 +20,7 @@
     display: grid;
     grid:   "sidebar header" 1fr
             "sidebar main" 5fr
-            /minmax(150px, 1fr) 5fr;
+            /minmax(150px, 1fr) 4fr;
 }
 
 .main-container > *{
@@ -133,17 +133,36 @@ label {
 
 .sidebar ul {
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template: 3fr repeat(10, 1fr)
+                    / 1fr 6fr;
 }
+
+.empty {
+    grid-column: span 2;
+}
+
+.sidebar ul li:not(.nav) {
+    justify-self: center;
+    align-self: center;
+}
+
+.nav {
+}
+
 .icons {
     grid-area: icons;
-    height: 1em;
-    filter: invert(1); /*inverts black svg into white*/
+    height: 1.1em;
+    filter: invert(1); /* inverts black svg into white */
+    /* vertical-align: middle; */
 }
 
 .icon-dash {
     grid-area: icon-dash;
-    height: 1em;
+    height: 2em;
+}
+
+.dash {
+    align-content: center;
 }
 
 .sidebar ul {
