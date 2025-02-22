@@ -23,10 +23,6 @@
             /minmax(150px, 1fr) 4fr;
 }
 
-.main-container > *{
-    /* outline: 1px solid red; */
-}
-
 .header {
     grid-area: header;
     display: grid;
@@ -136,9 +132,6 @@
 .sidebar ul li:not(.nav) {
     justify-self: center;
     align-self: center;
-}
-
-.nav {
 }
 
 .icons {
