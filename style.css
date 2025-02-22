@@ -173,6 +173,8 @@
 
 .projects-section {
     grid-area: projects;
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
 h2 {
@@ -219,10 +221,16 @@ div.project-card {
 
 .announcements{
     grid-area: announcements;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.announcements > div {
+    padding: 5px;
 }
 
 div.announcement {
-    font-size: 0.8em;
+    font-size: 0.73em;
     box-shadow: none;
 }
 
@@ -238,4 +246,6 @@ div.announcement {
 
 .trending{
     grid-area: trending;
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
