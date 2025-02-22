@@ -1,6 +1,6 @@
 :root {
     --light-blue: rgb(25,146,212);
-    --sahdow-grey: rgb(158, 158, 158);
+    --sahdow-grey: rgb(203, 199, 199);
     --orange: rgb(240,180,41);
 }
 
@@ -224,6 +224,16 @@ div.project-card {
 div.announcement {
     font-size: 0.8em;
     box-shadow: none;
+}
+
+.announcement p::after {
+    content: "..."; 
+}
+
+.announcements > div > div:nth-child(even) {
+    border-radius: 0;
+    border-top: 1px solid var(--sahdow-grey);
+    border-bottom: 1px solid var(--sahdow-grey);
 }
 
 .trending{
