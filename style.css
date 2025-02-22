@@ -203,6 +203,10 @@ div.project-card {
     font-size: 0.85em;
 }
 
+.project-card img {
+    height: 1em;
+}
+
 .announcements{
     grid-area: announcements;
 }
