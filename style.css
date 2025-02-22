@@ -145,7 +145,7 @@
     grid-area: icons;
     height: 1.1em;
     filter: invert(1); /* inverts black svg into white */
-    /* vertical-align: middle; */
+    vertical-align: middle;
 }
 
 .icon-dash {
@@ -157,6 +157,11 @@
     align-content: center;
 }
 
+.dash-text {
+    font-size: 1.3em;
+
+}
+
 .sidebar ul {
     display: grid;
     gap: 15px;
@@ -165,5 +170,36 @@
 .main {
     grid-area: main;
     display: grid;
+    grid: "projects announcements"
+            "projects tending" 
+            / 3fr 1fr;
     background-color: rgb(226,232,240);
+}
+
+.projects-section {
+    padding: 15px;
+}
+
+.projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.projects div,
+.announcements div,
+.trending div {
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 2px 2px 2px var(--sahdow-grey);
+}
+
+.announcements{
+    grid-area: announcements;
+}
+
+.trending{
+    grid-area: tending;
 }
